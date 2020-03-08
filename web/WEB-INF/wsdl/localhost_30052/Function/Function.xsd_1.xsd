@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Servlet/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Servlet/">
+
+<xs:element name="booking" type="tns:booking"/>
+
+<xs:element name="cekCustomer" type="tns:cekCustomer"/>
+
+<xs:element name="cekCustomerResponse" type="tns:cekCustomerResponse"/>
+
+<xs:element name="cekJumlahKamar" type="tns:cekJumlahKamar"/>
+
+<xs:element name="cekJumlahKamarResponse" type="tns:cekJumlahKamarResponse"/>
+
+<xs:element name="profilAdmin" type="tns:profilAdmin"/>
+
+<xs:element name="profilAdminResponse" type="tns:profilAdminResponse"/>
+
+<xs:element name="profilCustomer" type="tns:profilCustomer"/>
+
+<xs:element name="profilCustomerResponse" type="tns:profilCustomerResponse"/>
+
+<xs:element name="ubahJumlahKamar" type="tns:ubahJumlahKamar"/>
+
+<xs:element name="validateAdmin" type="tns:validateAdmin"/>
+
+<xs:element name="validateAdminResponse" type="tns:validateAdminResponse"/>
+
+<xs:element name="validateCustomer" type="tns:validateCustomer"/>
+
+<xs:element name="validateCustomerResponse" type="tns:validateCustomerResponse"/>
+
+<xs:complexType name="validateCustomer">
+<xs:sequence>
+<xs:element name="loginCust" type="tns:customerLogin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customerLogin">
+<xs:sequence>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validateCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="profilCustomer">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="profilCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:costumerID" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="costumerID">
+<xs:sequence>
+<xs:element name="alamat" type="xs:string" minOccurs="0"/>
+<xs:element name="idCustomer" type="xs:string" minOccurs="0"/>
+<xs:element name="nama" type="xs:string" minOccurs="0"/>
+<xs:element name="noTelp" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validateAdmin">
+<xs:sequence>
+<xs:element name="loginAdm" type="tns:adminLogin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="adminLogin">
+<xs:sequence>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validateAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekCustomer">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekJumlahKamar">
+<xs:sequence>
+<xs:element name="tipe" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cekJumlahKamarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="profilAdmin">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="profilAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:adminID" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="adminID">
+<xs:sequence>
+<xs:element name="idAdmin" type="xs:string" minOccurs="0"/>
+<xs:element name="nama" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ubahJumlahKamar">
+<xs:sequence>
+<xs:element name="cekCostumer" type="xs:int"/>
+<xs:element name="tipe" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="booking">
+<xs:sequence>
+<xs:element name="idBooking" type="xs:string" minOccurs="0"/>
+<xs:element name="idCustomer" type="xs:string" minOccurs="0"/>
+<xs:element name="nama" type="xs:string" minOccurs="0"/>
+<xs:element name="telepon" type="xs:string" minOccurs="0"/>
+<xs:element name="tanggalMasuk" type="xs:string" minOccurs="0"/>
+<xs:element name="tanggalKeluar" type="xs:string" minOccurs="0"/>
+<xs:element name="jumlahTamu" type="xs:string" minOccurs="0"/>
+<xs:element name="virtualAcc" type="xs:string" minOccurs="0"/>
+<xs:element name="cabang" type="xs:string" minOccurs="0"/>
+<xs:element name="tipeKamar" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

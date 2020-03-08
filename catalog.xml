@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:30052/Function/Function?wsdl" uri="src/conf/xml-resources/web-service-references/Function/wsdl/localhost_30052/Function/Function.wsdl"/>
+    <system systemId="http://localhost:30052/Function/Function?xsd=1" uri="src/conf/xml-resources/web-service-references/Function/wsdl/localhost_30052/Function/Function.xsd_1.xsd"/>
+    <system systemId="http://localhost:30052/Project_RPL_WebService/Project_RPL_WebService?wsdl" uri="src/conf/xml-resources/web-service-references/Project_RPL_WebService/wsdl/localhost_30052/Project_RPL_WebService/Project_RPL_WebService.wsdl"/>
+    <system systemId="http://localhost:30052/Project_RPL_WebService/Project_RPL_WebService?xsd=1" uri="src/conf/xml-resources/web-service-references/Project_RPL_WebService/wsdl/localhost_30052/Project_RPL_WebService/Project_RPL_WebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:30052/AriaWS/AriaWS?wsdl" uri="src/conf/xml-resources/web-service-references/AriaWS/wsdl/localhost_30052/AriaWS/AriaWS.wsdl"/>
+    <system systemId="http://localhost:30052/AriaWS/AriaWS?xsd=1" uri="src/conf/xml-resources/web-service-references/AriaWS/wsdl/localhost_30052/AriaWS/AriaWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/wsRpl/wsRpl?wsdl" uri="src/conf/xml-resources/web-service-references/wsRpl/wsdl/localhost_8080/wsRpl/wsRpl.wsdl"/>
+    <system systemId="http://localhost:8080/wsRpl/wsRpl?xsd=1" uri="src/conf/xml-resources/web-service-references/wsRpl/wsdl/localhost_8080/wsRpl/wsRpl.xsd_1.xsd"/>
+</catalog>

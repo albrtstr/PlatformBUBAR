@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://rpl.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://rpl.org/">
+
+<xs:element name="addCustomer" type="tns:addCustomer"/>
+
+<xs:element name="addKamar" type="tns:addKamar"/>
+
+<xs:element name="delkamar" type="tns:delkamar"/>
+
+<xs:element name="hapusCostumer" type="tns:hapusCostumer"/>
+
+<xs:element name="hapusbooking" type="tns:hapusbooking"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="showKamar" type="tns:showKamar"/>
+
+<xs:element name="showKamarResponse" type="tns:showKamarResponse"/>
+
+<xs:element name="showTransaksii" type="tns:showTransaksii"/>
+
+<xs:element name="showTransaksiiResponse" type="tns:showTransaksiiResponse"/>
+
+<xs:element name="showUser" type="tns:showUser"/>
+
+<xs:element name="showUserResponse" type="tns:showUserResponse"/>
+
+<xs:element name="updateKamar" type="tns:updateKamar"/>
+
+<xs:complexType name="hapusbooking">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="delkamar">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateKamar">
+<xs:sequence>
+<xs:element name="idKamar" type="xs:string" minOccurs="0"/>
+<xs:element name="tipeKamar" type="xs:string" minOccurs="0"/>
+<xs:element name="hargaKamar" type="xs:string" minOccurs="0"/>
+<xs:element name="jumlahKamar" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="showKamar">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="showKamarResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:kamar" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="kamar">
+<xs:sequence>
+<xs:element name="cabang" type="xs:string" minOccurs="0"/>
+<xs:element name="hargaKamar" type="xs:string" minOccurs="0"/>
+<xs:element name="idKamar" type="xs:string" minOccurs="0"/>
+<xs:element name="tipeKamar" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCustomer">
+<xs:sequence>
+<xs:element name="customer" type="tns:costumerID" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="costumerID">
+<xs:sequence>
+<xs:element name="alamat" type="xs:string" minOccurs="0"/>
+<xs:element name="idCustomer" type="xs:string" minOccurs="0"/>
+<xs:element name="nama" type="xs:string" minOccurs="0"/>
+<xs:element name="noTelp" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addKamar">
+<xs:sequence>
+<xs:element name="customer" type="tns:kamar" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="showTransaksii">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="showTransaksiiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:booking" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="booking">
+<xs:sequence>
+<xs:element name="cabang" type="xs:string" minOccurs="0"/>
+<xs:element name="idBooking" type="xs:string" minOccurs="0"/>
+<xs:element name="idCustomer" type="xs:string" minOccurs="0"/>
+<xs:element name="idKamar" type="xs:string" minOccurs="0"/>
+<xs:element name="jumlahTamu" type="xs:string" minOccurs="0"/>
+<xs:element name="nama" type="xs:string" minOccurs="0"/>
+<xs:element name="tanggalKeluar" type="xs:string" minOccurs="0"/>
+<xs:element name="tanggalMasuk" type="xs:string" minOccurs="0"/>
+<xs:element name="telepon" type="xs:string" minOccurs="0"/>
+<xs:element name="tipeKamar" type="xs:string" minOccurs="0"/>
+<xs:element name="virtualAcc" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hapusCostumer">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="showUser">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="showUserResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:costumerID" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
